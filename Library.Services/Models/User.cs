@@ -16,7 +16,7 @@ namespace Library.Services.Models
         [BsonElement("userName")]
         public string Username { get; set; }
 
-        [JsonIgnore]
+        [BsonElement("password")]
         public string Password { get; set; }
     }
 }

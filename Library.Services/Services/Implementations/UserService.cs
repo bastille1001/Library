@@ -1,50 +1,53 @@
 ﻿using Library.Services.AuthenticateModels;
+using Library.Services.DbConfig.DbClient.Users;
 using Library.Services.Models;
 using Library.Services.Services.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Library.Services.Services.Implementations
 {
     public class UserService : IUserService
     {
-        private readonly IDbUserClient _users;
         private readonly IConfiguration _configuration;
 
-        public UserService(IConfiguration configuration)
+        private readonly IMongoCollection<User> _users;
+        public UserService(IDbUserClient dbClient, 
+            IConfiguration configuration)
         {
+            _users = dbClient.GetUsersCollection();
             _configuration = configuration;
         }
 
         public AuthenticateResponse Authenticate(AuthenticateRequest model)
         {
-            var user = _users.SingleOrDefault(x => x.Username == model.Username && x.Password == model.Password);
-
+            var user = _users.Find(x => x.Username == model.Username && x.Password == model.Password).FirstOrDefault();
             if (user == null) return null;
-
-            var token = generateJwtToken(user);
-
+            var token = GenerateJwtToken(user);
             return new AuthenticateResponse(user, token);
         }
 
-        public IEnumerable<User> GetAll()
+        public User CreateUser(User user)
         {
-            return _users;
+            _users.InsertOne(user);
+            return user;
         }
 
-        public User GetById(string id)
-        {
-            return _users.FirstOrDefault(x => x.Id == id);
-        }
+        public User GetById(string id) =>
+            _users.Find(x => x.Id == id).FirstOrDefault();
 
-        private string generateJwtToken(User user)
+        public IEnumerable<User> GetAll() =>
+            _users.Find(x => true).ToList();
+
+
+        private string GenerateJwtToken(User user)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_configuration["JwtKey"]);

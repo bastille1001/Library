@@ -1,15 +1,14 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Library.Services.Services.Interfaces;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Library.Services.Middleware
+namespace Library.WebApi.Middleware
 {
     public class JwtMiddleware
     {
@@ -48,7 +47,7 @@ namespace Library.Services.Middleware
                 }, out SecurityToken validatedToken);
 
                 var jwtToken = (JwtSecurityToken)validatedToken;
-                var userId = int.Parse(jwtToken.Claims.First(x => x.Type == "id").Value);
+                var userId = jwtToken.Claims.First(x => x.Type == "id").Value;
 
                 context.Items["User"] = userService.GetById(userId);
             }

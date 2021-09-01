@@ -29,7 +29,7 @@ namespace Library.WebApi.Controllers
         public IActionResult CreateBook(Book book)
         {
             _bookServices.AddBook(book);
-            return Ok(book);
+            return CreatedAtRoute("GetBook", new { id = book.Id }, book);
         }
 
         [HttpGet("{id}", Name = "GetBook")]
@@ -37,5 +37,16 @@ namespace Library.WebApi.Controllers
         {
             return Ok(_bookServices.GetBook(id));
         }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteBook(string id)
+        {
+            _bookServices.DeleteBook(id);
+            return NoContent();
+        }
+
+        [HttpPut]
+        public IActionResult UpdateBook(Book book) =>
+            Ok(_bookServices.UpdateBook(book));
     }
 }
