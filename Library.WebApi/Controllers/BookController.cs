@@ -1,12 +1,7 @@
 ﻿using Library.Services.Attributes;
 using Library.Services.Models;
 using Library.Services.Services.Interfaces;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Library.WebApi.Controllers
 {
@@ -20,6 +15,9 @@ namespace Library.WebApi.Controllers
         {
             _bookServices = bookServices;
         }
+        [HttpGet("bygenre")]
+        public IActionResult GetByGenre(string genre) =>
+            Ok(_bookServices.GetByGenre(genre));
 
         [HttpGet]
         public IActionResult Get() =>

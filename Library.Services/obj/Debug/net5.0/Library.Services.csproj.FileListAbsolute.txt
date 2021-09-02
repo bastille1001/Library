@@ -10,3 +10,15 @@ C:\Users\timur\Desktop\Test-Task-Api\Library\Library.Services\obj\Debug\net5.0\L
 C:\Users\timur\Desktop\Test-Task-Api\Library\Library.Services\obj\Debug\net5.0\Library.Services.dll
 C:\Users\timur\Desktop\Test-Task-Api\Library\Library.Services\obj\Debug\net5.0\ref\Library.Services.dll
 C:\Users\timur\Desktop\Test-Task-Api\Library\Library.Services\obj\Debug\net5.0\Library.Services.pdb
+C:\Users\thuseynov\source\repos\Library\Library.Services\bin\Debug\net5.0\Library.Services.deps.json
+C:\Users\thuseynov\source\repos\Library\Library.Services\bin\Debug\net5.0\Library.Services.dll
+C:\Users\thuseynov\source\repos\Library\Library.Services\bin\Debug\net5.0\ref\Library.Services.dll
+C:\Users\thuseynov\source\repos\Library\Library.Services\bin\Debug\net5.0\Library.Services.pdb
+C:\Users\thuseynov\source\repos\Library\Library.Services\obj\Debug\net5.0\Library.Services.csproj.AssemblyReference.cache
+C:\Users\thuseynov\source\repos\Library\Library.Services\obj\Debug\net5.0\Library.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thuseynov\source\repos\Library\Library.Services\obj\Debug\net5.0\Library.Services.AssemblyInfoInputs.cache
+C:\Users\thuseynov\source\repos\Library\Library.Services\obj\Debug\net5.0\Library.Services.AssemblyInfo.cs
+C:\Users\thuseynov\source\repos\Library\Library.Services\obj\Debug\net5.0\Library.Services.csproj.CoreCompileInputs.cache
+C:\Users\thuseynov\source\repos\Library\Library.Services\obj\Debug\net5.0\Library.Services.dll
+C:\Users\thuseynov\source\repos\Library\Library.Services\obj\Debug\net5.0\ref\Library.Services.dll
+C:\Users\thuseynov\source\repos\Library\Library.Services\obj\Debug\net5.0\Library.Services.pdb

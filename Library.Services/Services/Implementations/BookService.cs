@@ -4,6 +4,7 @@ using Library.Services.Services.Interfaces;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Library.Services.Services.Implementations
 {
@@ -29,6 +30,9 @@ namespace Library.Services.Services.Implementations
 
         public List<Book> GetBooks() =>
             _books.Find(x => true).ToList();
+
+        public List<Book> GetByGenre(string genre) =>
+            _books.Find(x => x.Genres.Contains(genre)).ToList();
 
         public Book UpdateBook(Book book)
         {

@@ -1057,25 +1057,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\timur\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\thuseynov\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\timur\\Desktop\\Test-Task-Api\\Library\\Library.Services\\Library.Services.csproj",
+      "projectUniqueName": "C:\\Users\\thuseynov\\source\\repos\\Library\\Library.Services\\Library.Services.csproj",
       "projectName": "Library.Services",
-      "projectPath": "C:\\Users\\timur\\Desktop\\Test-Task-Api\\Library\\Library.Services\\Library.Services.csproj",
-      "packagesPath": "C:\\Users\\timur\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\timur\\Desktop\\Test-Task-Api\\Library\\Library.Services\\obj\\",
+      "projectPath": "C:\\Users\\thuseynov\\source\\repos\\Library\\Library.Services\\Library.Services.csproj",
+      "packagesPath": "C:\\Users\\thuseynov\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\thuseynov\\source\\repos\\Library\\Library.Services\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\timur\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\thuseynov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -1140,7 +1135,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

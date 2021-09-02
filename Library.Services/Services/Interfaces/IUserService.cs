@@ -10,5 +10,6 @@ namespace Library.Services.Services.Interfaces
         IEnumerable<User> GetAll();
         User CreateUser(User user);
         User GetById(string id);
+
     }
 }

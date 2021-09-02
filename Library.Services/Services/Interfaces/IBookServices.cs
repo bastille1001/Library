@@ -9,6 +9,7 @@ namespace Library.Services.Services.Interfaces
 {
     public interface IBookServices
     {
+        List<Book> GetByGenre(string genre);
         List<Book> GetBooks();
         Book GetBook(string id);
         Book AddBook(Book book);
